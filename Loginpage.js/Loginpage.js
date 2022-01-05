@@ -4,6 +4,13 @@ function LoginPage() {
 
 	const [Email,setEmail] = useState("")
 	const [password,setPassword] = useState("")
+	
+	const onEmailHandler = (event) =>{
+		setEmail(event.currenTarget.value)
+	}
+	const onPasswordHandler = (event) =>{
+		setPassword(event.currenTarget.value)
+	}
 
 	
 	return(
@@ -13,10 +20,9 @@ function LoginPage() {
 
 			<form style={{display:'flex', flexDirection:'column'}}>
 				<label>Email</label>
-				<input type="email" value={Email} onChange />
+				<input type="email" value={Email} onChange={onEmailHandler} />
 				<label>Password</label>
-				<input type="password" value={Password} onChange />
-
+				<input type="password" value={Password} onChange={onPasswordHandler} />
 				<br/>
 			<button>
 				Login
