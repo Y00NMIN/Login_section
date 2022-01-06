@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import Axios from 'axios'
+import {useDispatch} from react-redux;
 
 function LoginPage() {
 
@@ -13,7 +15,18 @@ function LoginPage() {
 	}
 
 	const onSubmitHandler= (event) =>{
-		event.preventDefault(); //페이지 미 새로고침 구문
+		event.preventDefault(); /* 페이지 미 새로고침 구문
+
+		let body = {
+			enail: Email,
+			password: Password
+		}
+
+		Axios.post('/api/user/login', body)
+		.then(response =>{
+			
+		})
+	
 	}
 
 	
